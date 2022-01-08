@@ -5,8 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
   @Post()
-  create(@Body('name') name): string {
-    console.log(name);
+  create(): string {
     return this.appService.postHello();
   }
 
