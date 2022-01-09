@@ -3,6 +3,7 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import helmet from 'helmet';
 import csurf from 'csurf';
+import cookieParser from 'cookie-parser';
 declare const module: any;
 
 async function bootstrap() {
@@ -14,6 +15,8 @@ async function bootstrap() {
   });
   app.use(helmet());
   app.use(csurf());
+  app.use(cookieParser());
+
   await app.listen(3000);
 
   if (module.hot) {
