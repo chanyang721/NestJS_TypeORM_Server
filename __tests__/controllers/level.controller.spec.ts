@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { LevelController } from './level.controller';
-import { LevelService } from './level.service';
+import { LevelController } from '../../src/api/level/level.controller';
+import { LevelService } from '../../src/api/level/level.service';
 
 describe('LevelController', () => {
   let controller: LevelController;
