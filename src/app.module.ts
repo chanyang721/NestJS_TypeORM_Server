@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-// import { UserModule } from './users/user.module';
+import { AppController } from './api/app/app.controller';
+import { AppService } from './api/app/app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersService } from './api/users/users.service';
 // import { Controller } from './.controller';
@@ -15,6 +14,7 @@ import { LevelModule } from './api/level/level.module';
     TypeOrmModule.forRoot({
       autoLoadEntities: true,
     }),
+    UsersModule,
     MoneyModule,
     CategoryModule,
     LevelModule,
