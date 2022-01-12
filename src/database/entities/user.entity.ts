@@ -8,7 +8,7 @@ import {
   DeleteDateColumn,
   Generated,
 } from 'typeorm';
-import { BaseColumns } from '../BaseColumn';
+import { BaseColumns } from '../BaseColumns';
 
 export type UserRoleType = 'admin' | 'editor' | 'ghost';
 
