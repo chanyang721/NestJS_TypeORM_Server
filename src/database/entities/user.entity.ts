@@ -8,12 +8,12 @@ import {
   DeleteDateColumn,
   Generated,
 } from 'typeorm';
-import { BaseColumn } from '../BaseColumn';
+import { BaseColumns } from '../BaseColumn';
 
 export type UserRoleType = 'admin' | 'editor' | 'ghost';
 
 @Entity({ name: 'users' })
-export class User extends BaseColumn {
+export class User extends BaseColumns {
   @Column('simple-json')
   profile: { name: string; nickname: string };
 

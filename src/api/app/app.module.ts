@@ -14,6 +14,7 @@ import { LevelModule } from '../level/level.module';
     TypeOrmModule.forRoot({
       autoLoadEntities: true,
     }),
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService, UsersService],

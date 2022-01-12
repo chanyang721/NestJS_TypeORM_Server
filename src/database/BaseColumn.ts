@@ -6,7 +6,7 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
-export abstract class BaseColumn {
+export abstract class BaseColumns {
   @PrimaryGeneratedColumn()
   id: number;
 
