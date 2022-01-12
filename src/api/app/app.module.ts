@@ -14,10 +14,6 @@ import { LevelModule } from '../level/level.module';
     TypeOrmModule.forRoot({
       autoLoadEntities: true,
     }),
-    UsersModule,
-    MoneyModule,
-    CategoryModule,
-    LevelModule,
   ],
   controllers: [AppController],
   providers: [AppService, UsersService],
