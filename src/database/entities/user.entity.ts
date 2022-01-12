@@ -12,34 +12,39 @@ import { BaseColumns } from '../BaseColumns';
 
 export type UserRoleType = 'admin' | 'editor' | 'ghost';
 
-@Entity({ name: 'users' })
+@Entity({
+  name: 'users',
+  orderBy: {
+    createdAt: 'ASC',
+  },
+})
 export class User extends BaseColumns {
   @Column('simple-json')
-  profile: { name: string; nickname: string };
+  profile?: { name?: string; nickname?: string };
 
   @Column()
-  gender: string;
+  gender?: string;
 
   @Column({
     type: 'enum',
     enum: ['admin', 'editor', 'ghost'],
     default: 'ghost',
   })
-  role: UserRoleType;
+  role?: UserRoleType;
 
   @Column()
   @Generated('uuid')
-  uuid: string;
+  uuid?: string;
 
   @Column()
-  email: string;
+  email?: string;
 
   @Column({ type: 'timestamp' })
-  birthday: Date;
+  birthday?: Date;
 
   @Column()
-  password: string;
+  password?: string;
 
   @Column()
-  photo: string;
+  photo?: string;
 }
