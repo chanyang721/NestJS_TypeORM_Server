@@ -1,4 +1,4 @@
-import { Logger, ConsoleLogger } from '@nestjs/common';
+import { ConsoleLogger } from '@nestjs/common';
 
 export class MyLogger extends ConsoleLogger {
   error(message: string, stack?: string, context?: string) {
