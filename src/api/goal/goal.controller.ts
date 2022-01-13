@@ -7,16 +7,15 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
+import { Goal } from 'src/database/entities/goal.entity';
 import { GoalService } from './goal.service';
-import { CreateGoalDto } from './dto/create-goal.dto';
-import { UpdateGoalDto } from './dto/update-goal.dto';
 
 @Controller('goal')
 export class GoalController {
   constructor(private readonly goalService: GoalService) {}
 
   @Post()
-  create(@Body() createGoalDto: CreateGoalDto) {
+  create(@Body() createGoalDto: Goal[]) {
     return this.goalService.create(createGoalDto);
   }
 
@@ -31,7 +30,7 @@ export class GoalController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateGoalDto: UpdateGoalDto) {
+  update(@Param('id') id: string, @Body() updateGoalDto: Goal[]) {
     return this.goalService.update(+id, updateGoalDto);
   }
 
