@@ -6,15 +6,15 @@ import {
 } from 'typeorm';
 
 export abstract class BaseColumns {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ type: 'bigint' })
   id?: number;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ type: 'timestamp' })
   createdAt?: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ type: 'timestamp' })
   updatedAt?: Date;
 
-  @DeleteDateColumn({ nullable: true })
+  @DeleteDateColumn({ type: 'timestamp', nullable: true })
   deletedAt?: Date;
 }
