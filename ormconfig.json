@@ -5,7 +5,9 @@
   "username": "root",
   "password": "1q2w",
   "database": "nest_test",
-  "entities": ["dist/**/*.entity{.ts,.js}"],
   "synchronize": true,
-  "timezone": "Z"
+  "timezone": "Z",
+  "supportBigNumbers": true,
+  "bigNumberStrings": false,
+  "entities": ["dist/**/*.entity{.ts,.js}"]
 }
